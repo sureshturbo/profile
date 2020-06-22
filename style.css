@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald|Rambla|Staatliches&display=swap');
 
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+  border: 3px solid black; 
+}
 /*#slider{
     overflow: hidden;
 }
@@ -338,7 +345,7 @@ ul.timeline{
     height: 200px;
     border-radius: 50%;
     margin: auto;
-    background: url(./assets/about.jpg) no-repeat;
+    background: url(./assets/photo6303316939191200376.jpg) no-repeat;
     background-size: 150%;
     background-position: 75%;
 }
