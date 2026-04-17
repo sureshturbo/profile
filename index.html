@@ -21,6 +21,7 @@
     --border: rgba(255,255,255,0.07);
     --font-display: 'Syne', sans-serif;
     --font-body: 'DM Sans', sans-serif;
+    --linkedin-blue: #0A66C2;
   }
 
   html { scroll-behavior: smooth; }
@@ -347,6 +348,223 @@
     font-weight: 500;
     padding-left: 2rem;
   }
+/* LinkedIn Posts Section - Complete Styles */
+.linkedin-section {
+    background: linear-gradient(135deg, var(--surface) 0%, #0A0A15 100%);
+    overflow: hidden;
+}
+
+.posts-carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 1rem 0;
+}
+
+.posts-scroll-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    cursor: grab;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+}
+
+.posts-scroll-wrapper:active {
+    cursor: grabbing;
+}
+
+.posts-scroll-wrapper::-webkit-scrollbar {
+    height: 4px;
+}
+
+.posts-scroll-wrapper::-webkit-scrollbar-track {
+    background: var(--surface2);
+    border-radius: 10px;
+}
+
+.posts-scroll-wrapper::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 10px;
+}
+
+.posts-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    padding: 0.5rem 0.5rem 1rem;
+    width: max-content;
+}
+
+.linkedin-post-card {
+    width: 340px;
+    min-width: 320px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.linkedin-post-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--linkedin-blue);
+    box-shadow: 0 10px 30px rgba(10, 102, 194, 0.15);
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.post-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--linkedin-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.post-author-info {
+    flex: 1;
+}
+
+.post-author-name {
+    font-weight: 700;
+    color: var(--text);
+    font-size: 0.9rem;
+}
+
+.post-date {
+    font-size: 0.7rem;
+    color: var(--muted);
+}
+
+.linkedin-icon {
+    color: var(--linkedin-blue);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.post-content {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    flex: 1;
+}
+
+.post-content p {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 0;
+}
+
+.read-more {
+    color: var(--linkedin-blue);
+    text-decoration: none;
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+    display: inline-block;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+.post-stats {
+    display: flex;
+    gap: 1rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.7rem;
+    color: var(--muted);
+}
+
+.post-stats span {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.auto-scroll-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.scroll-btn {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: var(--text);
+    font-size: 1.2rem;
+}
+
+.scroll-btn:hover {
+    background: var(--accent);
+    transform: scale(1.05);
+}
+
+.auto-scroll-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    color: var(--muted);
+}
+
+.toggle-auto {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 0.3rem 1rem;
+    cursor: pointer;
+    font-size: 0.7rem;
+    transition: all 0.2s;
+}
+
+.toggle-auto.active {
+    background: var(--accent);
+    color: white;
+}
+
+.loading-posts {
+    text-align: center;
+    padding: 3rem;
+    color: var(--muted);
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--border);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
 
   /* ── SKILLS ── */
   .skills-section { background: var(--surface); }
@@ -774,6 +992,36 @@
     <div class="quote-author">— Sureshrajan — Senior Flutter Dev</div>
   </div>
 </div>
+<!-- LINKEDIN POSTS SECTION - JSON METHOD -->
+<section id="linkedin-posts" class="linkedin-section">
+  <div style="max-width: 1300px; margin: 0 auto; padding: 0 2rem;">
+    <div class="reveal">
+      <div class="section-tag">Latest Updates</div>
+      <h2 class="section-title">LinkedIn <span style="color: var(--linkedin-blue);">Feed</span></h2>
+      <p class="section-desc">My latest thoughts, tutorials, and professional updates.</p>
+    </div>
+    
+    <div class="posts-carousel-container reveal">
+      <div class="posts-scroll-wrapper" id="scrollWrapper">
+        <div class="posts-flex" id="postsContainer">
+          <div class="loading-posts">
+            <div class="loading-spinner"></div>
+            <p>Loading latest posts...</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="auto-scroll-controls">
+        <button class="scroll-btn" id="scrollLeftBtn">←</button>
+        <div class="auto-scroll-indicator">
+          <span>🔄 Auto-scroll</span>
+          <button class="toggle-auto" id="toggleAutoBtn">⏸ Pause</button>
+        </div>
+        <button class="scroll-btn" id="scrollRightBtn">→</button>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ABOUT with Image -->
 <section id="about">
@@ -941,7 +1189,7 @@
   </div>
 </footer>
 
-<script>
+<!-- <script>
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((e, i) => {
     if (e.isIntersecting) {
@@ -950,6 +1198,178 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+</script> -->
+<script>
+// ============================================
+// SOLUTION 2: JSON FILE METHOD
+// This reads posts from a JSON file you control
+// ============================================
+
+// IMPORTANT: Change this URL to where you upload your linkedin-posts.json file
+// For GitHub Pages, if the JSON is in the same folder as index.html:
+const JSON_FEED_URL = 'https://sureshturbo.github.io/profile/linkedin-posts.json';
+// Or use full URL: 'https://sureshturbo.github.io/profile/linkedin-posts.json'
+
+async function fetchLinkedInPosts() {
+    const container = document.getElementById('postsContainer');
+    container.innerHTML = '<div class="loading-posts"><div class="loading-spinner"></div><p>Loading latest updates...</p></div>';
+    
+    try {
+        const response = await fetch(JSON_FEED_URL);
+        
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+        
+        const posts = await response.json();
+        
+        if (posts && posts.length > 0) {
+            // Format dates nicely
+            const formattedPosts = posts.map(post => ({
+                ...post,
+                date: formatDate(post.date)
+            }));
+            displayPosts(formattedPosts);
+        } else {
+            throw new Error('No posts found in JSON file');
+        }
+    } catch (error) {
+        console.error('Error loading posts:', error);
+        container.innerHTML = `<div class="loading-posts">
+            <p>⚠️ Unable to load posts.</p>
+            <p style="font-size:0.8rem; margin-top:0.5rem;">
+                <a href="https://www.linkedin.com/in/suresh-rajan-993b601a6/" target="_blank" style="color: var(--accent);">👉 Follow me on LinkedIn 👈</a>
+            </p>
+        </div>`;
+    }
+}
+
+function formatDate(dateString) {
+    try {
+        const date = new Date(dateString);
+        return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    } catch {
+        return dateString;
+    }
+}
+
+function displayPosts(posts) {
+    const container = document.getElementById('postsContainer');
+    
+    container.innerHTML = posts.map(post => `
+        <div class="linkedin-post-card">
+            <div class="post-header">
+                <div class="post-avatar">👨‍💻</div>
+                <div class="post-author-info">
+                    <div class="post-author-name">Sureshrajan</div>
+                    <div class="post-date">${post.date}</div>
+                </div>
+                <div class="linkedin-icon">in</div>
+            </div>
+            <div class="post-content">
+                <p>${escapeHtml(post.content.substring(0, 280))}${post.content.length > 280 ? '...' : ''}</p>
+                <a href="${post.url}" target="_blank" class="read-more">Read more on LinkedIn →</a>
+            </div>
+            <div class="post-stats">
+                <span>👍 ${post.likes || '—'}</span>
+                <span>💬 ${post.comments || '—'}</span>
+                <span>🔄 Share</span>
+            </div>
+        </div>
+    `).join('');
+    
+    // Re-attach scroll functionality after posts load
+    initAutoScroll();
+}
+
+function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
+
+// Auto-scroll functionality
+let autoScrollInterval = null;
+let isAutoScrolling = true;
+let scrollSpeed = 1;
+
+function startAutoScroll() {
+    if (autoScrollInterval) clearInterval(autoScrollInterval);
+    autoScrollInterval = setInterval(() => {
+        if (!isAutoScrolling) return;
+        const wrapper = document.getElementById('scrollWrapper');
+        if (wrapper) {
+            wrapper.scrollLeft += scrollSpeed;
+            if (wrapper.scrollLeft + wrapper.clientWidth >= wrapper.scrollWidth - 10) {
+                wrapper.scrollLeft = 0;
+            }
+        }
+    }, 30);
+}
+
+function stopAutoScroll() {
+    if (autoScrollInterval) {
+        clearInterval(autoScrollInterval);
+        autoScrollInterval = null;
+    }
+}
+
+function initAutoScroll() {
+    stopAutoScroll();
+    startAutoScroll();
+    
+    const wrapper = document.getElementById('scrollWrapper');
+    const toggleBtn = document.getElementById('toggleAutoBtn');
+    const leftBtn = document.getElementById('scrollLeftBtn');
+    const rightBtn = document.getElementById('scrollRightBtn');
+    
+    if (!wrapper) return;
+    
+    wrapper.addEventListener('mouseenter', () => { isAutoScrolling = false; });
+    wrapper.addEventListener('mouseleave', () => { isAutoScrolling = true; });
+    
+    if (leftBtn) leftBtn.addEventListener('click', () => { wrapper.scrollLeft -= 340; });
+    if (rightBtn) rightBtn.addEventListener('click', () => { wrapper.scrollLeft += 340; });
+    
+    if (toggleBtn) {
+        toggleBtn.addEventListener('click', () => {
+            isAutoScrolling = !isAutoScrolling;
+            toggleBtn.textContent = isAutoScrolling ? '⏸ Pause' : '▶ Start';
+            toggleBtn.classList.toggle('active', isAutoScrolling);
+        });
+    }
+}
+
+function showInstructions() {
+    alert(
+        "📋 HOW TO SET UP YOUR LINKEDIN FEED:\n\n" +
+        "1. Create a file named 'linkedin-posts.json'\n\n" +
+        "2. Copy this template into it:\n" +
+        '[\n' +
+        '  {\n' +
+        '    "id": 1,\n' +
+        '    "content": "Your LinkedIn post text here",\n' +
+        '    "date": "2025-04-15",\n' +
+        '    "likes": 100,\n' +
+        '    "comments": 10,\n' +
+        '    "url": "https://www.linkedin.com/posts/...",\n' +
+        '  }\n' +
+        ']\n\n' +
+        "3. Upload this file to the same folder as your website\n\n" +
+        "4. After each new LinkedIn post, add a new entry to the TOP of the JSON file\n\n" +
+        "That's it! Your website will automatically show your latest posts."
+    );
+}
+
+// Scroll reveal observer
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Load LinkedIn posts when page loads
+fetchLinkedInPosts();
 </script>
 </body>
 </html>
