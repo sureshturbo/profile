@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "content": "Excited to share that I've successfully completed Foundations of Log Analysis for Cyber Defense. Looking forward to applying these skills in real-world scenarios. 🚀",
+        "date": "2026-04-16",
+        "likes": 0,
+        "comments": 0,
+        "url": "https://www.linkedin.com/posts/suresh-rajan-993b601a6_foundations-of-log-analysis-for-cyber-defense-activity-7450593773547442178-e_0G"
+    },
+    {
+        "id": 2,
+        "content": "🚀 Excited to share my latest Flutter project: Job Application Automation Hub! 📧 What it does: ✅ Automates sending job applications via Gmail with resume attachments ✅ Pre-filled professional email templates ✅ One-click LinkedIn post sharing ✅ Beautiful Material Design 3 UI with gradient backgrounds. Tech Stack: Flutter & Dart, Gmail SMTP API Integration, File Picker, URL Launcher. Looking for Flutter Developer opportunities! #Flutter #FlutterDev #MobileDevelopment #OpenToWork",
+        "date": "2025-10-25",
+        "likes": 9,
+        "comments": 0,
+        "url": "https://www.linkedin.com/posts/suresh-rajan-993b601a6_flutter-flutterdev-mobiledevelopment-activity-7434440131815849984-UyXF"
+    },
+    {
+        "id": 3,
+        "content": "🤖 AI for All! Thrilled to have participated in the 'AI for All' 4-Day National Level Workshop conducted by Eudaimonic Trust in collaboration with ICT Academy. Gained valuable insights into Artificial Intelligence and its real-world impact. #AIForAll #ArtificialIntelligence #DigitalIndia #ICTAcademy #SkillDevelopment",
+        "date": "2025-05-20",
+        "likes": 0,
+        "comments": 0,
+        "url": "https://www.linkedin.com/posts/suresh-rajan-993b601a6_aiforall-artificialintelligence-digitalindia-activity-7329517315996164096-iyMo"
+    },
+    {
+        "id": 4,
+        "content": "Flutter vs Lynx: The Cross-Platform Evolution! 🚀 Explored the new Lynx framework from TikTok's parent company ByteDance. A Rust-powered UI framework that claims to bridge the gap between Flutter's performance and React's flexibility. The cross-platform space is getting exciting! #Flutter #Lynx #CrossPlatformDevelopment #MobileDev",
+        "date": "2025-05-15",
+        "likes": 0,
+        "comments": 0,
+        "url": "https://www.linkedin.com/posts/suresh-rajan-993b601a6_flutter-lynx-crossplatformdevelopment-activity-7327671438306435072-aAaT"
+    },
+    {
+        "id": 5,
+        "content": "❄️ Tech Winter Break 2024! Had an incredible time at GDG Madurai's Tech Winter Break - Flutter Edition. It was a fantastic deep dive into Flutter best practices, state management, and building production-ready apps. Grateful to the GDG Madurai team for organizing such a valuable learning session. #Flutter #GDG #TechWinterBreak #FlutterDev #MaduraiTech",
+        "date": "2024-12-28",
+        "likes": 0,
+        "comments": 0,
+        "url": "https://www.linkedin.com/posts/suresh-rajan-993b601a6_flutter-gdg-techwinterbreak-activity-7279126517350068224-madw"
+    },
+    {
+        "id": 6,
+        "content": "🚀 My Day at Google DevFest Madurai 2024! 🌟 Had an amazing time attending DevFest Madurai 2024 organized by Google Developer Group Madurai. Key Highlights: Android Development with Jetpack Compose by Sanju Sivalingam (GDE), Cloud Observability by Saurabh Mishra (GDE), AI Security Risks by Harisuthan S, Generative AI by Dilip Kumar K K, and Startup insights by Vinoth Rajendran from StartupTN. Thank you to Senthilkumar Murugesan and the entire GDG Madurai team for an unforgettable experience! #DevFestMadurai2024 #GoogleDevelopers #AI #Cloud #Android",
+        "date": "2024-12-17",
+        "likes": 0,
+        "comments": 0,
+        "url": "https://www.linkedin.com/posts/suresh-rajan-993b601a6_devfestmadurai2024-googledevelopers-ai-activity-7274772828804014080-vY0s"
+    }
+]
